@@ -6,4 +6,6 @@ Archive
 Category
 ExpenseTraits
 
+AdditionalExpenses is an optional extension of the MainMenu class. It currently adds a "moving expense" category.
+
 by Nick Malensek
