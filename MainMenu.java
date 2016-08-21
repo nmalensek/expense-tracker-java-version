@@ -1,3 +1,5 @@
+package expensetracker5000;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -8,47 +10,53 @@ import java.util.Scanner;
 public class MainMenu {
 
     public static void main(String[] args) {
-        String choice;
         String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
-
         Archive arc = new Archive();
 
         arc.checkForFolders();
         arc.moveToArchive(timestamp);
 
         try {
-            while (true) {
-
-                choice = null;
-                InitialOptions();
-                choice = Selection();
-                Category cat = null;
-                if (choice.equals("1")) {
-                    cat = new Category(timestamp + " food.txt", "food");
-                } else if (choice.equals("2")) {
-                    cat = new Category(timestamp + " rent+utilities.txt", "rent/utilities");
-                } else if (choice.equals("3")) {
-                    cat = new Category(timestamp + " transportation.txt", "transportation");
-                } else if (choice.equals("4")) {
-                    cat = new Category(timestamp + " recreation.txt", "recreation");
-                } else if (choice.equals("5")) {
-                    cat = new Category(timestamp + " clothing.txt", "clothing");
-                } else if (choice.equals("6")) {
-                    cat = new Category(timestamp + " vacation.txt", "vacation");
-                } else if (choice.equals("q") || choice.equals("7")) {
-                    System.out.println("Goodbye!");
-                    break;
-                } else {
-                    System.out.println("Not a valid option!\n");
-                }
+            while (inputOptions()) {
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static void InitialOptions() {
+    public static boolean inputOptions() {
+        String choice;
+        String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
+
+        initialOptions();
+        choice = selection();
+        Category cat = null;
+        if (choice.equals("1")) {
+            cat = new Category(timestamp + " food.txt", "food");
+        } else if (choice.equals("2")) {
+            cat = new Category(timestamp + " rent+utilities.txt", "rent/utilities");
+        } else if (choice.equals("3")) {
+            cat = new Category(timestamp + " transportation.txt", "transportation");
+        } else if (choice.equals("4")) {
+            cat = new Category(timestamp + " recreation.txt", "recreation");
+        } else if (choice.equals("5")) {
+            cat = new Category(timestamp + " clothing.txt", "clothing");
+        } else if (choice.equals("6")) {
+            cat = new Category(timestamp + " vacation.txt", "vacation");
+        } else if (choice.equals("q")) {
+            System.out.println("Goodbye!");
+            return false;
+        } else {
+            System.out.println("Not a valid option!\n");
+        }
+
+        return true;
+    }
+
+    public static void initialOptions() {
         System.out.println("Welcome to Expense Tracker 5000!");
+        System.out.println("Enter q at any prompt to go back one menu level");
         System.out.println("Please choose from the following categories:");
         System.out.println("1 - Food");
         System.out.println("2 - Rent/Utilities");
@@ -56,10 +64,9 @@ public class MainMenu {
         System.out.println("4 - Recreation");
         System.out.println("5 - Clothing");
         System.out.println("6 - Vacation");
-        System.out.println("7/q - Quit");
     }
 
-    private static String Selection() {
+    public static String selection() {
         Scanner input = new Scanner(System.in);
         String user_selection;
 
