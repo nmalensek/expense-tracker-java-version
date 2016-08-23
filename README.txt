@@ -9,3 +9,8 @@ ExpenseTraits
 AdditionalExpenses is an optional extension of the MainMenu class. It currently adds a "moving expense" category.
 
 by Nick Malensek
+
+Building & Running
+------------------
+    mvn clean compile package
+    java -jar ./target/expensetracker5000-1.0.jar
