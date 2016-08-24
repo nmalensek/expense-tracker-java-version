@@ -1,3 +1,5 @@
+package expensetracker5000;
+
 import java.util.Scanner;
 
 /**
