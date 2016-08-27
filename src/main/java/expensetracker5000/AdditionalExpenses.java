@@ -18,7 +18,6 @@ public class AdditionalExpenses extends MainMenu {
         try {
             while (additionalInputOptions()) {
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -39,10 +38,27 @@ public class AdditionalExpenses extends MainMenu {
         choice = selection();
         Category cat = null;
 
-        if (choice.equals("7")) {
+        if (choice.equals("1")) {
+            cat = new Category(timestamp + " food.txt", "food");
+        } else if (choice.equals("2")) {
+            cat = new Category(timestamp + " rent+utilities.txt", "rent/utilities");
+        } else if (choice.equals("3")) {
+            cat = new Category(timestamp + " transportation.txt", "transportation");
+        } else if (choice.equals("4")) {
+            cat = new Category(timestamp + " recreation.txt", "recreation");
+        } else if (choice.equals("5")) {
+            cat = new Category(timestamp + " clothing.txt", "clothing");
+        } else if (choice.equals("6")) {
+            cat = new Category(timestamp + " vacation.txt", "vacation");
+        } else if (choice.equals("7")) {
             cat = new Category(timestamp + " moving.txt", "moving");
+        } else if (choice.equals("q")) {
+            System.out.println("Goodbye!");
+            return false;
         } else {
-            inputOptions();
-        } return inputOptions();
+            System.out.println("Not a valid option!\n");
+        }
+
+        return true;
     }
 }
