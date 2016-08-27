@@ -6,8 +6,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 /**
  * Created by nicholas on 8/14/16.
@@ -69,10 +67,10 @@ public class Archive {
         }
     }
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
 //        Archive arc = new Archive();
 //
 //        arc.moveToArchive(timestamp);
-    }
+//    }
 }

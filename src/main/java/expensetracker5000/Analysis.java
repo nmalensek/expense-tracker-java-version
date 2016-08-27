@@ -112,25 +112,32 @@ public class Analysis {
                 System.out.println(sum);
                 System.out.println("\n--------------------------------------\n");
             } else if (statType.equals("mean")) {
-                double mean = sum / valuesToAnalyze.size();
-                BigDecimal twoDigits = new BigDecimal(mean).setScale(2, RoundingMode.HALF_UP);
+                try {
+                    double mean = sum / valuesToAnalyze.size();
+                    BigDecimal twoDigits = new BigDecimal(mean).setScale(2, RoundingMode.HALF_UP);
 
-                System.out.println("\n--- Mean of (sub)category expenses: ---\n");
-                System.out.println(twoDigits);
-                System.out.println("\n---------------------------------------\n");
-
-            } else if (statType.equals("median")) {
-                Collections.sort(medianList);
-                double median;
-                if (medianList.size() % 2 == 0) {
-                    median = ((medianList.get(medianList.size() / 2 - 1) +
-                            medianList.get(medianList.size() / 2)) / 2);
-                } else {
-                    median = (medianList.get((medianList.size() - 1) / 2));
+                    System.out.println("\n--- Mean of (sub)category expenses: ---\n");
+                    System.out.println(twoDigits);
+                    System.out.println("\n---------------------------------------\n");
+                } catch (NumberFormatException nfe) {
+                    System.out.println("No expenses available to calculate the mean, please add an expense\n");
                 }
-                System.out.println("\n--- Median of (sub)category expenses: ---\n");
-                System.out.println(median);
-                System.out.println("\n-----------------------------------------\n");
+            } else if (statType.equals("median")) {
+                try {
+                    Collections.sort(medianList);
+                    double median;
+                    if (medianList.size() % 2 == 0) {
+                        median = ((medianList.get(medianList.size() / 2 - 1) +
+                                medianList.get(medianList.size() / 2)) / 2);
+                    } else {
+                        median = (medianList.get((medianList.size() - 1) / 2));
+                    }
+                    System.out.println("\n--- Median of (sub)category expenses: ---\n");
+                    System.out.println(median);
+                    System.out.println("\n-----------------------------------------\n");
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    System.out.println("No expenses available to calculate median, please add an expense\n");
+                }
             }
         } catch (NullPointerException npe) {
             System.out.println("Going back...\n");

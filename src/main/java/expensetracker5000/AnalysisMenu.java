@@ -9,7 +9,7 @@ public class AnalysisMenu {
 
     public boolean AnalysisMainMenu(String categoryFileToAnalyze, String categoryToAnalyze) {
         String userChoice;
-        boolean toMainMenu = true;
+        boolean toMainMenu = false;
 
         while (true) {
             Analysis a = new Analysis();
@@ -26,10 +26,10 @@ public class AnalysisMenu {
                 a.statFromFile(categoryFileToAnalyze, "mean", "subcategory");
             } else if (userChoice.equals("5")) {
                 a.statFromFile(categoryFileToAnalyze, "median", "");
-            } else if (userChoice.equals("6") || userChoice.equals("q")) {
+            } else if (userChoice.equals("q")) {
                 break;
-            } else if (userChoice.equals("7") || userChoice.equals("e")) {
-                toMainMenu = false;
+            } else if (userChoice.equals("e")) {
+                toMainMenu = true;
                 break;
             } else {
                 System.out.println("Not a valid option!");
@@ -44,8 +44,6 @@ public class AnalysisMenu {
         System.out.println("3 - Mean of category expenses");
         System.out.println("4 - Mean of subcategory expenses");
         System.out.println("5 - Median of category expenses");
-        System.out.println("6/q - Go back");
-        System.out.println("7/e - Exit to main menu");
     }
 
     private static String userSelection() {

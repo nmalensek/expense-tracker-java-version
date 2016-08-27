@@ -32,7 +32,7 @@ public class Category {
                 } else if (choice.equals("3")) {
                     a.printExpenseFile(actualPath);
                 } else if (choice.equals("4")) {
-                    if (am.AnalysisMainMenu(actualPath, chosenCategory)) {
+                    if (!am.AnalysisMainMenu(actualPath, chosenCategory)) {
                     } else {
                         break;
                     }
@@ -43,7 +43,7 @@ public class Category {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                } else if (choice.equals("6") || choice.equals("q")) {
+                } else if (choice.equals("q")) {
                     break;
                 } else {
                     System.out.println("Not a valid option!\n");
@@ -56,7 +56,7 @@ public class Category {
                     writeList(actualPath, "no");
                 } else if (choice.equals("2")) {
                     writeList(actualPath, "yes");
-                } else if (choice.equals("3") || choice.equals("q")) {
+                } else if (choice.equals("q")) {
                     break;
                 } else {
                     System.out.println("Not a valid option!\n");
@@ -73,14 +73,12 @@ public class Category {
         System.out.println("3 - List all entered expenses");
         System.out.println("4 - Analyze " + expenseCategory + " expenses");
         System.out.println("5 - Open expense file");
-        System.out.println("6/q - Go back");
     }
 
     private static void newFileOptions(String expenseCategory) {
-        System.out.println(expenseCategory + " category does not exist, enter a new expense or \'q\' to go back");
+        System.out.println(expenseCategory + " category does not exist, enter a new expense");
         System.out.println("1 - Add new expense");
         System.out.println("2 - Add multiple expenses");
-        System.out.println("3/q - Go back");
     }
 
     private static String selection() {
@@ -123,7 +121,7 @@ public class Category {
 
         while (true) {
             try {
-                System.out.println("Enter the expense amount or q to go back:");
+                System.out.println("Enter the expense amount:");
                 expense = newExpenseInput.next();
 
                 if (expense.equals("q")) {
@@ -134,14 +132,14 @@ public class Category {
                     expense = Double.toString(userInput);
                     newExpenseInput.nextLine();
 
-                    System.out.println("Enter the subcategory or q to go back:");
+                    System.out.println("Enter the subcategory:");
                     subcategory = newExpenseInput.nextLine();
 
                     if (subcategory.equals("q")) {
                         System.out.println("Going back...\n");
                         break;
                     } else {
-                        System.out.println("Enter the expense description or q to go back:");
+                        System.out.println("Enter the expense description:");
                         description = newExpenseInput.nextLine();
 
                         if (description.equals("q")) {
