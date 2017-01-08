@@ -1,4 +1,4 @@
-package expensetracker5000;
+package expensetracker5000.file_modification;
 
 import java.io.File;
 import java.io.FilenameFilter;
@@ -13,29 +13,26 @@ import java.nio.file.Paths;
 public class Archive {
 
     public void checkForFolders() {
-        String expenseFolder = "./expenses";
-        String archive = "./expenses/expense_archive";
+        String expenseFolderPath = "./expenses";
+        String archiveFolderPath = "./expenses/expense_archive";
 
-        File currentExpenseFolder = new File(expenseFolder);
-        File archiveFolder = new File(archive);
+        File currentExpenseFolder = new File(expenseFolderPath);
+        File archiveFolder = new File(archiveFolderPath);
 
-        if (currentExpenseFolder.exists()) {
-            //archive folder exists, do nothing
+        checkForFolder(currentExpenseFolder, expenseFolderPath, "Expense");
+        checkForFolder(archiveFolder, archiveFolderPath, "Archive");
+    }
+
+    private void checkForFolder(File folderToCheckFor, String folderPath,
+                                String folderType) {
+        if (folderToCheckFor.exists()) {
+            //folder exists, do nothing
         } else {
             try {
-                System.out.println("Creating expenses folder...");
-                Files.createDirectory(Paths.get(expenseFolder));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        if (archiveFolder.exists()) {
-            //archive folder exists, do nothing
-        } else {
-            try {
-                System.out.println("Creating archive folder...\n");
-                Files.createDirectory(Paths.get(archive));
+                System.out.println(folderType + " folder does not exist, " +
+                        "creating " + folderType.toLowerCase() + " folder...");
+                Files.createDirectory(Paths.get(folderPath));
+                System.out.println(folderType + " folder created...\n");
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -45,9 +42,6 @@ public class Archive {
     public void moveToArchive(String currentMonth) {
         String archiveLocation = "./expenses/expense_archive/";
         String expenseLocation = "./expenses/";
-
-        Path archiveDir = Paths.get(archiveLocation);
-        Path expenseDir = Paths.get(expenseLocation);
 
         File directory = new File(expenseLocation);
         String[] myFiles = directory.list(new FilenameFilter() {
@@ -61,6 +55,7 @@ public class Archive {
                 Path convertExpenseString = Paths.get(expenseLocation + f);
                 Path convertArchiveString = Paths.get(archiveLocation + f);
                 Files.move(convertExpenseString, convertArchiveString);
+                System.out.println("Archiving complete...\n");
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -1,4 +1,4 @@
-package expensetracker5000;
+package expensetracker5000.analysis;
 
 import java.util.Date;
 

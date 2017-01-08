@@ -1,4 +1,8 @@
-package expensetracker5000;
+package expensetracker5000.file_modification;
+
+import expensetracker5000.analysis.ExpenseTraits;
+import expensetracker5000.analysis.Analysis;
+import expensetracker5000.menus.AnalysisMenu;
 
 import java.awt.*;
 import java.io.*;

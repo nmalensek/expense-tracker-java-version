@@ -1,6 +1,7 @@
-package expensetracker5000;
+package expensetracker5000.menus;
 
-import java.util.Scanner;
+import expensetracker5000.analysis.Analysis;
+import static expensetracker5000.menus.TextInput.userInput;
 
 /**
  * Created by nicholas on 8/17/16.
@@ -14,7 +15,7 @@ public class AnalysisMenu {
         while (true) {
             Analysis a = new Analysis();
             analysisOptions(categoryToAnalyze);
-            userChoice = userSelection();
+            userChoice = userInput();
 
             if (userChoice.equals("1")) {
                 a.statFromFile(categoryFileToAnalyze, "sum", "");
@@ -44,15 +45,6 @@ public class AnalysisMenu {
         System.out.println("3 - Mean of category expenses");
         System.out.println("4 - Mean of subcategory expenses");
         System.out.println("5 - Median of category expenses");
-    }
-
-    private static String userSelection() {
-        Scanner input = new Scanner(System.in);
-        String user_selection;
-
-        user_selection = input.next();
-
-        return user_selection;
     }
 
 }

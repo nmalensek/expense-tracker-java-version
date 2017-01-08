@@ -1,12 +1,17 @@
-package expensetracker5000;
+package expensetracker5000.menus;
+
+import expensetracker5000.file_modification.Archive;
+import expensetracker5000.file_modification.Category;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import static expensetracker5000.menus.TextInput.userInput;
+
 /**
- * Created by nicholas on 8/21/16.
+ * Created by nicholas on 8/5/16.
  */
-public class AdditionalExpenses extends MainMenu {
+public class MainMenu {
 
     public static void main(String[] args) {
         String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
@@ -16,28 +21,21 @@ public class AdditionalExpenses extends MainMenu {
         arc.moveToArchive(timestamp);
 
         try {
-            while (additionalInputOptions()) {
+            while (inputOptions()) {
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
-    private static void additionalOptions() {
-        System.out.println("7 - Moving expenses");
-    }
-
-    private static boolean additionalInputOptions() {
+    public static boolean inputOptions() {
         String choice;
         String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
 
         initialOptions();
-        additionalOptions();
-
-        choice = selection();
+        choice = userInput();
         Category cat = null;
-
         if (choice.equals("1")) {
             cat = new Category(timestamp + " food.txt", "food");
         } else if (choice.equals("2")) {
@@ -50,8 +48,6 @@ public class AdditionalExpenses extends MainMenu {
             cat = new Category(timestamp + " clothing.txt", "clothing");
         } else if (choice.equals("6")) {
             cat = new Category(timestamp + " vacation.txt", "vacation");
-        } else if (choice.equals("7")) {
-            cat = new Category(timestamp + " moving.txt", "moving");
         } else if (choice.equals("q")) {
             System.out.println("Goodbye!");
             return false;
@@ -60,5 +56,17 @@ public class AdditionalExpenses extends MainMenu {
         }
 
         return true;
+    }
+
+    public static void initialOptions() {
+        System.out.println("Welcome to Expense Tracker 5000!");
+        System.out.println("Enter q at any prompt to go back one menu level");
+        System.out.println("Please choose from the following categories:");
+        System.out.println("1 - Food");
+        System.out.println("2 - Rent/Utilities");
+        System.out.println("3 - Transportation");
+        System.out.println("4 - Recreation");
+        System.out.println("5 - Clothing");
+        System.out.println("6 - Vacation");
     }
 }
