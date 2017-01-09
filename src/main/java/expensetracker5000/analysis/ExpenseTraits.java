@@ -1,7 +1,5 @@
 package expensetracker5000.analysis;
 
-import java.util.Date;
-
 /**
  * Created by nicholas on 8/6/16.
  */

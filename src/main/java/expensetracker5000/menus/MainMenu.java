@@ -3,22 +3,20 @@ package expensetracker5000.menus;
 import expensetracker5000.file_modification.Archive;
 import expensetracker5000.file_modification.Category;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
+import static expensetracker5000.menus.CurrentDate.currentYearMonth;
 import static expensetracker5000.menus.TextInput.userInput;
 
 /**
  * Created by nicholas on 8/5/16.
  */
 public class MainMenu {
+    private static String yearAndMonth = currentYearMonth();
 
     public static void main(String[] args) {
-        String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
         Archive arc = new Archive();
 
         arc.checkForFolders();
-        arc.moveToArchive(timestamp);
+        arc.moveToArchive(yearAndMonth);
 
         try {
             while (inputOptions()) {
@@ -31,23 +29,22 @@ public class MainMenu {
 
     public static boolean inputOptions() {
         String choice;
-        String timestamp = new SimpleDateFormat("yyyy-MM").format(Calendar.getInstance().getTime());
 
         initialOptions();
         choice = userInput();
         Category cat = null;
         if (choice.equals("1")) {
-            cat = new Category(timestamp + " food.txt", "food");
+            cat = new Category(yearAndMonth + " food.txt", "food");
         } else if (choice.equals("2")) {
-            cat = new Category(timestamp + " rent+utilities.txt", "rent/utilities");
+            cat = new Category(yearAndMonth + " rent+utilities.txt", "rent/utilities");
         } else if (choice.equals("3")) {
-            cat = new Category(timestamp + " transportation.txt", "transportation");
+            cat = new Category(yearAndMonth + " transportation.txt", "transportation");
         } else if (choice.equals("4")) {
-            cat = new Category(timestamp + " recreation.txt", "recreation");
+            cat = new Category(yearAndMonth + " recreation.txt", "recreation");
         } else if (choice.equals("5")) {
-            cat = new Category(timestamp + " clothing.txt", "clothing");
+            cat = new Category(yearAndMonth + " clothing.txt", "clothing");
         } else if (choice.equals("6")) {
-            cat = new Category(timestamp + " vacation.txt", "vacation");
+            cat = new Category(yearAndMonth + " vacation.txt", "vacation");
         } else if (choice.equals("q")) {
             System.out.println("Goodbye!");
             return false;

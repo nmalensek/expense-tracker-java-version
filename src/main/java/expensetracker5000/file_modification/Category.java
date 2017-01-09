@@ -6,42 +6,46 @@ import expensetracker5000.menus.AnalysisMenu;
 
 import java.awt.*;
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.List;
 
+import static expensetracker5000.menus.CurrentDate.currentDateWithDay;
+import static expensetracker5000.menus.ExpenseDirectory.FOLDERPATH;
+import static expensetracker5000.menus.TextInput.userInput;
 
 /**
  * Created by nicholas on 8/5/16.
  */
 public class Category {
+    private String expenseFolderPath = FOLDERPATH.expenseFolderPath();
+    private String currentDate = currentDateWithDay();
 
     public Category(String categoryFile, String chosenCategory) {
         String choice;
-        String actualPath = "./expenses/" + categoryFile;
-        File checkFile = new File(actualPath);
+        String filePath = expenseFolderPath + categoryFile;
+        File checkFile = new File(filePath);
 
 
         while (true) {
             if (checkFile.exists() && !checkFile.isDirectory()) {
                 options(chosenCategory);
-                choice = selection();
+                choice = userInput();
                 Analysis a = new Analysis();
                 AnalysisMenu am = new AnalysisMenu();
 
                 if (choice.equals("1")) {
-                    writeList(actualPath, "no");
+                    writeList(filePath, "no");
                 } else if (choice.equals("2")) {
-                    writeList(actualPath, "yes");
+                    writeList(filePath, "yes");
                 } else if (choice.equals("3")) {
-                    a.printExpenseFile(actualPath);
+                    a.printExpenseFile(filePath);
                 } else if (choice.equals("4")) {
-                    if (!am.AnalysisMainMenu(actualPath, chosenCategory)) {
+                    if (!am.AnalysisMainMenu(filePath, chosenCategory)) {
                     } else {
                         break;
                     }
                 } else if (choice.equals("5")) {
-                    File f = new File(actualPath);
+                    File f = new File(filePath);
                     try {
                         Desktop.getDesktop().edit(f);
                     } catch (IOException e) {
@@ -54,12 +58,12 @@ public class Category {
                 }
             } else {
                 newFileOptions(chosenCategory);
-                choice = selection();
+                choice = userInput();
 
                 if (choice.equals("1")) {
-                    writeList(actualPath, "no");
+                    writeList(filePath, "no");
                 } else if (choice.equals("2")) {
-                    writeList(actualPath, "yes");
+                    writeList(filePath, "yes");
                 } else if (choice.equals("q")) {
                     break;
                 } else {
@@ -83,15 +87,6 @@ public class Category {
         System.out.println(expenseCategory + " category does not exist, enter a new expense");
         System.out.println("1 - Add new expense");
         System.out.println("2 - Add multiple expenses");
-    }
-
-    private static String selection() {
-        Scanner input = new Scanner(System.in);
-        String user_selection;
-
-        user_selection = input.next();
-
-        return user_selection;
     }
 
     public void writeList(String fileToWrite, String numerousEntries) {
@@ -119,7 +114,6 @@ public class Category {
     private List<ExpenseTraits> createList(String multipleEntries) {
         String expense, subcategory, description;
         Scanner newExpenseInput = new Scanner(System.in);
-        String current_date = new SimpleDateFormat("yyyy-MM-dd").format(Calendar.getInstance().getTime());
 
         List<ExpenseTraits> entries = new ArrayList<>();
 
@@ -150,7 +144,7 @@ public class Category {
                             System.out.println("Going back...\n");
                             break;
                         } else {
-                            ExpenseTraits ET = new ExpenseTraits(current_date, expense, subcategory, description);
+                            ExpenseTraits ET = new ExpenseTraits(currentDate, expense, subcategory, description);
                             entries.add(ET);
 
                             System.out.println("\n--- New expense added! ---\n");
