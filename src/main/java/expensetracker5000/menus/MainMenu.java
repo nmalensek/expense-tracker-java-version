@@ -4,6 +4,7 @@ import expensetracker5000.file_modification.Archive;
 import expensetracker5000.file_modification.Category;
 
 import static expensetracker5000.menus.CurrentDate.currentYearMonth;
+import static expensetracker5000.menus.MenuOptions.mainMenuOptions;
 import static expensetracker5000.menus.TextInput.userInput;
 
 /**
@@ -30,7 +31,7 @@ public class MainMenu {
     public static boolean inputOptions() {
         String choice;
 
-        initialOptions();
+        mainMenuOptions();
         choice = userInput();
         Category cat = null;
         if (choice.equals("1")) {
@@ -53,17 +54,5 @@ public class MainMenu {
         }
 
         return true;
-    }
-
-    public static void initialOptions() {
-        System.out.println("Welcome to Expense Tracker 5000!");
-        System.out.println("Enter q at any prompt to go back one menu level");
-        System.out.println("Please choose from the following categories:");
-        System.out.println("1 - Food");
-        System.out.println("2 - Rent/Utilities");
-        System.out.println("3 - Transportation");
-        System.out.println("4 - Recreation");
-        System.out.println("5 - Clothing");
-        System.out.println("6 - Vacation");
     }
 }

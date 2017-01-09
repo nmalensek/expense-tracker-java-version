@@ -11,6 +11,8 @@ import java.util.List;
 
 import static expensetracker5000.menus.CurrentDate.currentDateWithDay;
 import static expensetracker5000.menus.ExpenseDirectory.FOLDERPATH;
+import static expensetracker5000.menus.MenuOptions.categoryOptions;
+import static expensetracker5000.menus.MenuOptions.newFileOptions;
 import static expensetracker5000.menus.TextInput.userInput;
 
 /**
@@ -28,7 +30,7 @@ public class Category {
 
         while (true) {
             if (checkFile.exists() && !checkFile.isDirectory()) {
-                options(chosenCategory);
+                categoryOptions(chosenCategory);
                 choice = userInput();
                 Analysis a = new Analysis();
                 AnalysisMenu am = new AnalysisMenu();
@@ -72,21 +74,6 @@ public class Category {
             }
 
         }
-    }
-
-    private static void options(String expenseCategory) {
-        System.out.println("Please choose from the following actions to modify " + expenseCategory + " expenses:");
-        System.out.println("1 - Add new expense");
-        System.out.println("2 - Add multiple expenses");
-        System.out.println("3 - List all entered expenses");
-        System.out.println("4 - Analyze " + expenseCategory + " expenses");
-        System.out.println("5 - Open expense file");
-    }
-
-    private static void newFileOptions(String expenseCategory) {
-        System.out.println(expenseCategory + " category does not exist, enter a new expense");
-        System.out.println("1 - Add new expense");
-        System.out.println("2 - Add multiple expenses");
     }
 
     public void writeList(String fileToWrite, String numerousEntries) {

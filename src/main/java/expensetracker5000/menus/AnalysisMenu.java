@@ -1,6 +1,8 @@
 package expensetracker5000.menus;
 
 import expensetracker5000.analysis.Analysis;
+
+import static expensetracker5000.menus.MenuOptions.analysisOptions;
 import static expensetracker5000.menus.TextInput.userInput;
 
 /**
@@ -37,16 +39,6 @@ public class AnalysisMenu {
             }
         } return toMainMenu;
     }
-
-    private static void analysisOptions(String category) {
-        System.out.println("Analyze " + category + " expenses:");
-        System.out.println("1 - Sum of category expenses");
-        System.out.println("2 - Sum of subcategory expenses");
-        System.out.println("3 - Mean of category expenses");
-        System.out.println("4 - Mean of subcategory expenses");
-        System.out.println("5 - Median of category expenses");
-    }
-
 }
 
 

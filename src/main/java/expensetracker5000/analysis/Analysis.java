@@ -68,8 +68,6 @@ public class Analysis {
                     if (readType.equals("subcategory")) {
                         if (readSubcategory.equals(subcategory)) {
                             expenseTraitsList.add(eT);
-                        } else {
-                            //don't add
                         }
                     } else {
                         expenseTraitsList.add(eT);
