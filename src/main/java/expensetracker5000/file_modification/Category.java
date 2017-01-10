@@ -10,10 +10,12 @@ import java.util.*;
 import java.util.List;
 
 import static expensetracker5000.menus.CurrentDate.currentDateWithDay;
+import static expensetracker5000.menus.CurrentDate.currentYearMonth;
 import static expensetracker5000.menus.ExpenseDirectory.FOLDERPATH;
 import static expensetracker5000.menus.MenuOptions.categoryOptions;
 import static expensetracker5000.menus.MenuOptions.newFileOptions;
 import static expensetracker5000.menus.TextInput.userInput;
+import static expensetracker5000.menus.TextInput.userLineInput;
 
 /**
  * Created by nicholas on 8/5/16.
@@ -21,12 +23,13 @@ import static expensetracker5000.menus.TextInput.userInput;
 public class Category {
     private String expenseFolderPath = FOLDERPATH.expenseFolderPath();
     private String currentDate = currentDateWithDay();
+    private static String yearAndMonth = currentYearMonth();
+    private String input;
 
-    public Category(String categoryFile, String chosenCategory) {
+    public Category(String chosenCategory) {
         String choice;
-        String filePath = expenseFolderPath + categoryFile;
+        String filePath = expenseFolderPath + yearAndMonth + " " + chosenCategory + ".txt";
         File checkFile = new File(filePath);
-
 
         while (true) {
             if (checkFile.exists() && !checkFile.isDirectory()) {
@@ -47,9 +50,8 @@ public class Category {
                         break;
                     }
                 } else if (choice.equals("5")) {
-                    File f = new File(filePath);
                     try {
-                        Desktop.getDesktop().edit(f);
+                        Desktop.getDesktop().edit(checkFile);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -85,11 +87,12 @@ public class Category {
             try {
                 writer = new BufferedWriter(new FileWriter(categoryLog, true));
                 writer.write(cL.toString());
-            } catch (Exception e) {
+            } catch (IOException e) {
                 System.out.println("Failed to write expense: " + cL);
                 e.printStackTrace();
             } finally {
                 try {
+                    System.out.println("\n--- New expense(s) added! ---\n");
                     writer.close();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -100,54 +103,39 @@ public class Category {
 
     private List<ExpenseTraits> createList(String multipleEntries) {
         String expense, subcategory, description;
-        Scanner newExpenseInput = new Scanner(System.in);
 
         List<ExpenseTraits> entries = new ArrayList<>();
 
         while (true) {
-            try {
-                System.out.println("Enter the expense amount:");
-                expense = newExpenseInput.next();
+            expense = expenseEntry();
 
-                if (expense.equals("q")) {
-                    System.out.println("Going back...\n");
-                    break;
-                } else {
-                    double userInput = Double.parseDouble(expense);
-                    expense = Double.toString(userInput);
-                    newExpenseInput.nextLine();
+            System.out.println("Enter the subcategory:");
+            subcategory = userLineInput();
 
-                    System.out.println("Enter the subcategory:");
-                    subcategory = newExpenseInput.nextLine();
+            System.out.println("Enter the expense description:");
+            description = userLineInput();
 
-                    if (subcategory.equals("q")) {
-                        System.out.println("Going back...\n");
-                        break;
-                    } else {
-                        System.out.println("Enter the expense description:");
-                        description = newExpenseInput.nextLine();
+            ExpenseTraits ET = new ExpenseTraits(currentDate, expense, subcategory, description);
+            entries.add(ET);
 
-                        if (description.equals("q")) {
-                            System.out.println("Going back...\n");
-                            break;
-                        } else {
-                            ExpenseTraits ET = new ExpenseTraits(currentDate, expense, subcategory, description);
-                            entries.add(ET);
-
-                            System.out.println("\n--- New expense added! ---\n");
-
-                            if (multipleEntries.equals("yes")) {
-                                continue;
-                            } else if (multipleEntries.equals("no")) {
-                                break;
-                            }
-                        }
-                    }
-                }
-            } catch (NumberFormatException e) {
-                System.out.println("Please enter a dollar amount.");
+            if (multipleEntries.equals("yes")) {
+                continue;
+            } else if (multipleEntries.equals("no")) {
+                break;
             }
         }
         return entries;
+    }
+
+    private String expenseEntry() {
+        System.out.println("Enter the expense amount:");
+        input = userInput();
+        try {
+            Double.parseDouble(input);
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a dollar amount.");
+            expenseEntry();
+        }
+        return input;
     }
 }

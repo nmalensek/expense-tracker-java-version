@@ -8,9 +8,12 @@ import java.util.Scanner;
 public class TextInput {
     public static String userInput() {
         Scanner input = new Scanner(System.in);
-        String user_selection;
 
-        user_selection = input.next();
-        return user_selection;
+        return input.next();
+    }
+
+    public static String userLineInput() {
+        Scanner input = new Scanner(System.in);
+        return input.nextLine();
     }
 }

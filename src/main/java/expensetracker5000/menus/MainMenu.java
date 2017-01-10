@@ -11,13 +11,12 @@ import static expensetracker5000.menus.TextInput.userInput;
  * Created by nicholas on 8/5/16.
  */
 public class MainMenu {
-    private static String yearAndMonth = currentYearMonth();
 
     public static void main(String[] args) {
         Archive arc = new Archive();
 
         arc.checkForFolders();
-        arc.moveToArchive(yearAndMonth);
+        arc.checkForOldFiles();
 
         try {
             while (inputOptions()) {
@@ -35,17 +34,17 @@ public class MainMenu {
         choice = userInput();
         Category cat = null;
         if (choice.equals("1")) {
-            cat = new Category(yearAndMonth + " food.txt", "food");
+            cat = new Category("food");
         } else if (choice.equals("2")) {
-            cat = new Category(yearAndMonth + " rent+utilities.txt", "rent/utilities");
+            cat = new Category("rent+utilities");
         } else if (choice.equals("3")) {
-            cat = new Category(yearAndMonth + " transportation.txt", "transportation");
+            cat = new Category("transportation");
         } else if (choice.equals("4")) {
-            cat = new Category(yearAndMonth + " recreation.txt", "recreation");
+            cat = new Category("recreation");
         } else if (choice.equals("5")) {
-            cat = new Category(yearAndMonth + " clothing.txt", "clothing");
+            cat = new Category("clothing");
         } else if (choice.equals("6")) {
-            cat = new Category(yearAndMonth + " vacation.txt", "vacation");
+            cat = new Category("vacation");
         } else if (choice.equals("q")) {
             System.out.println("Goodbye!");
             return false;

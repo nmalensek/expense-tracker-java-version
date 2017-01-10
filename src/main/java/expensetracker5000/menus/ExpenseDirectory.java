@@ -11,6 +11,6 @@ public enum ExpenseDirectory {
     }
 
     public String archiveFolderPath() {
-        return "./.expenses/archive";
+        return "./.expenses/archive/";
     }
 }
