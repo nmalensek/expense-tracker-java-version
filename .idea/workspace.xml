@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffa27272-1a06-47cb-b253-9262cdaf19bf" name="Default" comment="rearranged package structure">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.expenses/2017-01 food.txt" afterPath="$PROJECT_DIR$/.expenses/2017-01 food.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Archive.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Archive.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ExpenseDirectory.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ExpenseDirectory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MenuOptions.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MenuOptions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/TextInput.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/TextInput.java" />
     </list>
     <ignored path="expense-tracker-java-version.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
+            <state relative-caret-position="180">
               <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1875">
-              <caret line="125" column="9" lean-forward="false" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
+            <state relative-caret-position="192">
+              <caret line="69" column="83" lean-forward="false" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,11 +128,11 @@
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Categories.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/TextInput.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java" />
-        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ExpenseDirectory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/CurrentDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Archive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" />
       </list>
     </option>
   </component>
@@ -653,7 +646,7 @@
         <state relative-caret-position="105">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -742,7 +735,7 @@
         <state relative-caret-position="225">
           <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -752,10 +745,10 @@
         <state relative-caret-position="240">
           <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#241#242#0" expanded="true" />
-            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#163#164#0" expanded="false" />
+            <element signature="e#200#201#0" expanded="false" />
+            <element signature="e#241#242#0" expanded="false" />
+            <element signature="e#286#287#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -801,16 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1875">
-          <caret line="125" column="9" lean-forward="false" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/CurrentDate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -825,8 +808,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="180">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="69" column="83" lean-forward="false" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -67,7 +67,7 @@ public class Category {
                 if (choice.equals("1")) {
                     writeList(filePath, "no");
                 } else if (choice.equals("2")) {
-                    writeList(filePath, "yes");
+                    System.out.println("feature disabled until GUI is implemented");
                 } else if (choice.equals("q")) {
                     break;
                 } else {
