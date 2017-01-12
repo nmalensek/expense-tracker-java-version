@@ -1,6 +1,7 @@
 package expensetracker5000.menus;
 
 import expensetracker5000.analysis.Analysis;
+import expensetracker5000.analysis.CalculateStatistics;
 
 import static expensetracker5000.menus.MenuOptions.analysisOptions;
 import static expensetracker5000.menus.TextInput.userInput;
@@ -15,20 +16,20 @@ public class AnalysisMenu {
         boolean toMainMenu = false;
 
         while (true) {
-            Analysis a = new Analysis();
+            CalculateStatistics cs = new CalculateStatistics();
             analysisOptions(categoryToAnalyze);
             userChoice = userInput();
 
             if (userChoice.equals("1")) {
-                a.statFromFile(categoryFileToAnalyze, "sum", "");
+                cs.statFromFile(categoryFileToAnalyze, "sum", "");
             } else if (userChoice.equals("2")) {
-                a.statFromFile(categoryFileToAnalyze, "sum", "subcategory");
+                cs.statFromFile(categoryFileToAnalyze, "sum", "subcategory");
             } else if (userChoice.equals("3")) {
-                a.statFromFile(categoryFileToAnalyze, "mean", "");
+                cs.statFromFile(categoryFileToAnalyze, "mean", "");
             } else if (userChoice.equals("4")) {
-                a.statFromFile(categoryFileToAnalyze, "mean", "subcategory");
+                cs.statFromFile(categoryFileToAnalyze, "mean", "subcategory");
             } else if (userChoice.equals("5")) {
-                a.statFromFile(categoryFileToAnalyze, "median", "");
+                cs.statFromFile(categoryFileToAnalyze, "median", "");
             } else if (userChoice.equals("q")) {
                 break;
             } else if (userChoice.equals("e")) {
