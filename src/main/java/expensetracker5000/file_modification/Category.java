@@ -6,6 +6,7 @@ import expensetracker5000.menus.AnalysisMenu;
 
 import java.awt.*;
 import java.io.*;
+import java.math.BigDecimal;
 import java.util.*;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public class Category {
     private String expenseFolderPath = FOLDERPATH.expenseFolderPath();
     private String currentDate = currentDateWithDay();
     private static String yearAndMonth = currentYearMonth();
-    private String input;
+    BigDecimal stringToBigDecimal = new BigDecimal("0.00");
 
     public Category(String chosenCategory) {
         String choice;
@@ -39,9 +40,9 @@ public class Category {
                 AnalysisMenu am = new AnalysisMenu();
 
                 if (choice.equals("1")) {
-                    writeList(filePath, "no");
+                    writeExpense(filePath, "no");
                 } else if (choice.equals("2")) {
-                    writeList(filePath, "yes");
+                    System.out.println("feature disabled until GUI is implemented");
                 } else if (choice.equals("3")) {
                     a.printExpenseFile(filePath);
                 } else if (choice.equals("4")) {
@@ -65,7 +66,7 @@ public class Category {
                 choice = userInput();
 
                 if (choice.equals("1")) {
-                    writeList(filePath, "no");
+                    writeExpense(filePath, "no");
                 } else if (choice.equals("2")) {
                     System.out.println("feature disabled until GUI is implemented");
                 } else if (choice.equals("q")) {
@@ -78,64 +79,62 @@ public class Category {
         }
     }
 
-    public void writeList(String fileToWrite, String numerousEntries) {
-        List<ExpenseTraits> createdList = createList(numerousEntries);
+    public void writeExpense(String fileToWrite, String numerousEntries) {
+        List<ExpenseTraits> createdList = createExpense(numerousEntries);
         BufferedWriter writer = null;
         File categoryLog = new File(fileToWrite);
 
-        for (ExpenseTraits cL : createdList) {
+        for (ExpenseTraits expense : createdList) {
             try {
                 writer = new BufferedWriter(new FileWriter(categoryLog, true));
-                writer.write(cL.toString());
+                writer.write(expense.toString());
+                System.out.println("\n--- New expense(s) added! ---\n");
             } catch (IOException e) {
-                System.out.println("Failed to write expense: " + cL);
+                System.out.println("Failed to write expense: " + expense);
                 e.printStackTrace();
             } finally {
-                try {
-                    System.out.println("\n--- New expense(s) added! ---\n");
-                    writer.close();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                closeWriter(writer);
             }
         }
     }
 
-    private List<ExpenseTraits> createList(String multipleEntries) {
-        String expense, subcategory, description;
+    private void closeWriter(BufferedWriter writer) {
+        try {
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    private List<ExpenseTraits> createExpense(String multipleEntries) {
         List<ExpenseTraits> entries = new ArrayList<>();
 
-        while (true) {
-            expense = expenseEntry();
+        ExpenseTraits eT = new ExpenseTraits(currentDate, expenseEntry(),
+                subcategoryEntry(), descriptionEntry());
+        entries.add(eT);
 
-            System.out.println("Enter the subcategory:");
-            subcategory = userLineInput();
-
-            System.out.println("Enter the expense description:");
-            description = userLineInput();
-
-            ExpenseTraits ET = new ExpenseTraits(currentDate, expense, subcategory, description);
-            entries.add(ET);
-
-            if (multipleEntries.equals("yes")) {
-                continue;
-            } else if (multipleEntries.equals("no")) {
-                break;
-            }
-        }
         return entries;
     }
 
-    private String expenseEntry() {
+    private BigDecimal expenseEntry() {
         System.out.println("Enter the expense amount:");
-        input = userInput();
+        String input = userInput();
         try {
-            Double.parseDouble(input);
+            stringToBigDecimal = new BigDecimal(input);
         } catch (NumberFormatException e) {
             System.out.println("Please enter a dollar amount.");
             expenseEntry();
         }
-        return input;
+        return stringToBigDecimal;
+    }
+
+    private String subcategoryEntry() {
+        System.out.println("Enter the subcategory:");
+        return userLineInput();
+    }
+
+    private String descriptionEntry() {
+        System.out.println("Enter the expense description:");
+        return userLineInput();
     }
 }

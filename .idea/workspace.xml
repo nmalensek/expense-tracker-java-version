@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffa27272-1a06-47cb-b253-9262cdaf19bf" name="Default" comment="rearranged package structure">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" />
     </list>
     <ignored path="expense-tracker-java-version.iws" />
@@ -35,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Category.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="69" column="83" lean-forward="false" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
+            <state relative-caret-position="147">
+              <caret line="103" column="33" lean-forward="true" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -47,10 +50,30 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Analysis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="372">
+              <caret line="106" column="83" lean-forward="false" selection-start-line="106" selection-start-column="83" selection-end-line="106" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpenseTraits.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="AbstractCategories.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
+            <state relative-caret-position="270">
               <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,7 +85,7 @@
       <file leaf-file-name="Categories.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Categories.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
+            <state relative-caret-position="390">
               <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
               <folding>
                 <element signature="e#179#180#0" expanded="true" />
@@ -120,8 +143,6 @@
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AdditionalExpenses.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/userInput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java" />
-        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AnalysisMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MenuOptions.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Food.java" />
@@ -132,7 +153,9 @@
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/CurrentDate.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Archive.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java" />
       </list>
     </option>
   </component>
@@ -164,20 +187,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="expense-tracker-java-version">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,6 +293,20 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="expense-tracker-java-version">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -556,7 +579,6 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24933451" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -568,6 +590,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -604,6 +627,73 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="105" column="88" lean-forward="false" selection-start-line="105" selection-start-column="88" selection-end-line="105" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Categories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AdditionalExpenses.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,30 +780,7 @@
     <entry file="file://$USER_HOME$/Documents/School/CS414/final/JavaFiles/RentalStateMachine.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AdditionalExpenses.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/FolderDirectories.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="70" column="25" lean-forward="true" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Food.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Food.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/TextInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -763,37 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Categories.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#855#856#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/CurrentDate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -816,13 +852,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/Categories.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="69" column="83" lean-forward="false" selection-start-line="69" selection-start-column="83" selection-end-line="69" selection-end-column="83" />
+        <state relative-caret-position="390">
+          <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#216#217#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/ExpenseTraits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="103" column="33" lean-forward="true" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="106" column="83" lean-forward="false" selection-start-line="106" selection-start-column="83" selection-end-line="106" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
