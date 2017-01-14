@@ -3,7 +3,6 @@ package expensetracker5000.menus;
 import expensetracker5000.file_modification.Archive;
 import expensetracker5000.file_modification.Category;
 
-import static expensetracker5000.menus.CurrentDate.currentYearMonth;
 import static expensetracker5000.menus.MenuOptions.mainMenuOptions;
 import static expensetracker5000.menus.TextInput.userInput;
 

@@ -1,6 +1,5 @@
 package expensetracker5000.menus;
 
-import expensetracker5000.analysis.Analysis;
 import expensetracker5000.analysis.CalculateStatistics;
 
 import static expensetracker5000.menus.MenuOptions.analysisOptions;

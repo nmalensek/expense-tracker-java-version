@@ -1,7 +1,7 @@
 package expensetracker5000.file_modification;
 
 import expensetracker5000.analysis.ExpenseTraits;
-import expensetracker5000.analysis.Analysis;
+import expensetracker5000.analysis.FileReader;
 import expensetracker5000.menus.AnalysisMenu;
 
 import java.awt.*;
@@ -36,13 +36,13 @@ public class Category {
             if (checkFile.exists() && !checkFile.isDirectory()) {
                 categoryOptions(chosenCategory);
                 choice = userInput();
-                Analysis a = new Analysis();
+                FileReader a = new FileReader();
                 AnalysisMenu am = new AnalysisMenu();
 
                 if (choice.equals("1")) {
                     writeExpense(filePath, "no");
                 } else if (choice.equals("2")) {
-                    System.out.println("feature disabled until GUI is implemented");
+                    System.out.println("feature disabled until gui is implemented");
                 } else if (choice.equals("3")) {
                     a.printExpenseFile(filePath);
                 } else if (choice.equals("4")) {
@@ -68,7 +68,7 @@ public class Category {
                 if (choice.equals("1")) {
                     writeExpense(filePath, "no");
                 } else if (choice.equals("2")) {
-                    System.out.println("feature disabled until GUI is implemented");
+                    System.out.println("feature disabled until gui is implemented");
                 } else if (choice.equals("q")) {
                     break;
                 } else {

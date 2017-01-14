@@ -10,11 +10,11 @@ import java.util.List;
  */
 public class CalculateStatistics {
     private BigDecimal two = new BigDecimal("2.00");
-    Analysis analysis = new Analysis();
+    FileReader fileReader = new FileReader();
 
     public void statFromFile(String fileName, String statType, String totalOrSubcategory) {
         try {
-            List<BigDecimal> valuesToAnalyze = analysis.readExpenses(
+            List<BigDecimal> valuesToAnalyze = fileReader.readExpenses(
                     fileName, statType, totalOrSubcategory);
 
             if (statType.equals("sum")) {
