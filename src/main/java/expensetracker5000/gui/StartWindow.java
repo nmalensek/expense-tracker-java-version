@@ -2,30 +2,33 @@ package expensetracker5000.gui;
 
 import expensetracker5000.categories.Categories;
 import expensetracker5000.categories.CategoryCreator;
+import expensetracker5000.menus.ButtonCreator;
 
 import javax.swing.*;
 import java.util.List;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 /**
  * Created by nicholas on 1/14/17.
  */
-public class MainMenu {
+public class StartWindow {
     private JFrame mainGUI;
     private JPanel contentPane;
     private JLabel chooseCategory;
     private CategoryCreator categoryCreator;
     private List<Categories> categoriesList;
+    private ButtonCreator bC;
 
     public void createFrame() {
         mainGUI = new JFrame();
         mainGUI.setTitle("Welcome to ExpenseTracker5000!");
-        mainGUI.setBounds(100, 100, 450, 300);
+        mainGUI.setBounds(100, 100, 375, 150);
+        bC = new ButtonCreator(this);
 
+        chooseCategory = new JLabel("Please select a category:");
 
         contentPane = new JPanel(new FlowLayout());
+        contentPane.add(chooseCategory);
         retrieveCategories();
         addButtons();
 
@@ -35,19 +38,9 @@ public class MainMenu {
 
     private void addButtons() {
         for (Categories category : categoriesList) {
-            JButton newButton = createButton(category, category.getName());
+            JButton newButton = bC.createCategoryButton(category, category.getName());
             contentPane.add(newButton);
         }
-    }
-
-    private JButton createButton(Categories category, String label) {
-        JButton newButton = new JButton(label);
-        newButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(label);
-            }
-        });
-        return newButton;
     }
 
     private void retrieveCategories() {
@@ -55,8 +48,13 @@ public class MainMenu {
         categoriesList = categoryCreator.getAvailableCategories();
     }
 
+    public void addPane(JPanel panel) { mainGUI.add(panel); }
+
+    public void showMainPane() { contentPane.setVisible(true); }
+    public void hideMainPane() { contentPane.setVisible(false); }
+
     public static void main(String[] args) {
-        MainMenu mainTest = new MainMenu();
+        StartWindow mainTest = new StartWindow();
         mainTest.createFrame();
     }
 }
