@@ -21,72 +21,19 @@ import static expensetracker5000.menus.TextInput.userLineInput;
 /**
  * Created by nicholas on 8/5/16.
  */
-public class Category {
-    private String expenseFolderPath = FOLDERPATH.expenseFolderPath();
+public class ExpenseWriter {
     private String currentDate = currentDateWithDay();
     private static String yearAndMonth = currentYearMonth();
     BigDecimal stringToBigDecimal = new BigDecimal("0.00");
 
-    public Category(String chosenCategory) {
-        String choice;
-        String filePath = expenseFolderPath + yearAndMonth + " " + chosenCategory + ".txt";
-        File checkFile = new File(filePath);
 
-        while (true) {
-            if (checkFile.exists() && !checkFile.isDirectory()) {
-                categoryOptions(chosenCategory);
-                choice = userInput();
-                FileReader a = new FileReader();
-                AnalysisMenu am = new AnalysisMenu();
-
-                if (choice.equals("1")) {
-                    writeExpense(filePath, "no");
-                } else if (choice.equals("2")) {
-                    System.out.println("feature disabled until gui is implemented");
-                } else if (choice.equals("3")) {
-                    a.printExpenseFile(filePath);
-                } else if (choice.equals("4")) {
-                    if (!am.AnalysisMainMenu(filePath, chosenCategory)) {
-                    } else {
-                        break;
-                    }
-                } else if (choice.equals("5")) {
-                    try {
-                        Desktop.getDesktop().edit(checkFile);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                } else if (choice.equals("q")) {
-                    break;
-                } else {
-                    System.out.println("Not a valid option!\n");
-                }
-            } else {
-                newFileOptions(chosenCategory);
-                choice = userInput();
-
-                if (choice.equals("1")) {
-                    writeExpense(filePath, "no");
-                } else if (choice.equals("2")) {
-                    System.out.println("feature disabled until gui is implemented");
-                } else if (choice.equals("q")) {
-                    break;
-                } else {
-                    System.out.println("Not a valid option!\n");
-                }
-            }
-
-        }
-    }
-
-    public void writeExpense(String fileToWrite, String numerousEntries) {
-        List<ExpenseTraits> createdList = createExpense(numerousEntries);
+    public void writeExpense(File fileToWrite) {
+        List<ExpenseTraits> createdList = createExpense();
         BufferedWriter writer = null;
-        File categoryLog = new File(fileToWrite);
 
         for (ExpenseTraits expense : createdList) {
             try {
-                writer = new BufferedWriter(new FileWriter(categoryLog, true));
+                writer = new BufferedWriter(new java.io.FileWriter(fileToWrite, true));
                 writer.write(expense.toString());
                 System.out.println("\n--- New expense(s) added! ---\n");
             } catch (IOException e) {
@@ -106,7 +53,7 @@ public class Category {
         }
     }
 
-    private List<ExpenseTraits> createExpense(String multipleEntries) {
+    private List<ExpenseTraits> createExpense() {
         List<ExpenseTraits> entries = new ArrayList<>();
 
         ExpenseTraits eT = new ExpenseTraits(currentDate, expenseEntry(),

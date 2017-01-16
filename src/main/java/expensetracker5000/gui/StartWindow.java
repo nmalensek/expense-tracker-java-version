@@ -1,6 +1,6 @@
 package expensetracker5000.gui;
 
-import expensetracker5000.categories.Categories;
+import expensetracker5000.categories.Category;
 import expensetracker5000.categories.CategoryCreator;
 import expensetracker5000.menus.ButtonCreator;
 
@@ -16,7 +16,7 @@ public class StartWindow {
     private JPanel contentPane;
     private JLabel chooseCategory;
     private CategoryCreator categoryCreator;
-    private List<Categories> categoriesList;
+    private List<Category> categoriesList;
     private ButtonCreator bC;
 
     public void createFrame() {
@@ -37,7 +37,7 @@ public class StartWindow {
     }
 
     private void addButtons() {
-        for (Categories category : categoriesList) {
+        for (Category category : categoriesList) {
             JButton newButton = bC.createCategoryButton(category, category.getName());
             contentPane.add(newButton);
         }

@@ -1,5 +1,7 @@
 package expensetracker5000.categories;
 
+import expensetracker5000.file_modification.ExpenseWriter;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -13,18 +15,19 @@ import static expensetracker5000.menus.ExpenseDirectory.FOLDERPATH;
 /**
  * Created by nicholas on 1/9/17.
  */
-public class Categories {
+public class Category {
     private String name;
     private File categoryFile;
-    private static List<Categories> availableCategories = new ArrayList<>();
+    private static List<Category> availableCategories = new ArrayList<>();
 
-    public Categories(String name) {
+    public Category(String name) {
         this.name = name;
         setFilePath();
         availableCategories.add(this);
     }
     public void newExpense() {
-        System.out.println("new expense");
+        ExpenseWriter expenseWriter = new ExpenseWriter();
+        expenseWriter.writeExpense(categoryFile);
     }
 
     public void multipleExpenses() {
@@ -57,7 +60,5 @@ public class Categories {
     }
 
     public String getName() { return name; }
-
-    public List<Categories> getAvailableCategories() { return availableCategories; }
 }
 

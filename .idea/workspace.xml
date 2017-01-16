@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffa27272-1a06-47cb-b253-9262cdaf19bf" name="Default" comment="rearranged package structure">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/ExpenseMenu.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ButtonCreator.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/MainMenu.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/CategoryCreator.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/CategoryCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/ExpenseMenu.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/ExpenseMenu.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ButtonCreator.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ButtonCreator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" afterPath="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
     </list>
     <ignored path="expense-tracker-java-version.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,10 +30,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StartWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="132">
               <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,51 +64,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExpenseMenu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/gui/ExpenseMenu.java">
+      <file leaf-file-name="CategoryCreator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/CategoryCreator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="27" column="37" lean-forward="false" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="165">
+              <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#264#265#0" expanded="true" />
+                <element signature="e#295#296#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ButtonCreator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ButtonCreator.java">
+      <file leaf-file-name="ExpenseWriter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="83" column="63" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2238#2239#0" expanded="true" />
-                <element signature="e#2300#2301#0" expanded="true" />
-                <element signature="e#2596#2597#0" expanded="true" />
-                <element signature="e#2653#2654#0" expanded="true" />
-                <element signature="e#2940#2941#0" expanded="true" />
-                <element signature="e#2998#2999#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Categories.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java">
+      <file leaf-file-name="Category.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+            <state relative-caret-position="192">
+              <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#682#683#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-                <element signature="e#769#770#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#858#859#0" expanded="true" />
-                <element signature="e#909#910#0" expanded="true" />
-                <element signature="e#938#939#0" expanded="true" />
-                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#944#945#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1029#1030#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,7 +154,6 @@
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/AnalysisMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/CalculateStatistics.java" />
-        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AnalysisMenu.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/Analysis.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/FileReader.java" />
@@ -161,6 +166,11 @@
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ButtonCreator.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/TextExpenseMenu.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/FileWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java" />
       </list>
     </option>
   </component>
@@ -755,20 +765,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -777,11 +785,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
           <caret line="103" column="33" lean-forward="true" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
@@ -810,20 +820,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,11 +840,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -865,20 +875,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/AbstractCategories.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,7 +910,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -936,7 +944,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -955,7 +965,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,16 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1317">
-          <caret line="103" column="33" lean-forward="false" selection-start-line="103" selection-start-column="33" selection-end-line="103" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/analysis/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
@@ -1048,39 +1050,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ExpenseDirectory.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MenuOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        <state relative-caret-position="600">
+          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/CategoryCreator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="165">
           <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#266#267#0" expanded="false" />
-            <element signature="e#297#298#0" expanded="false" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MenuOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="132">
+          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,47 +1089,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ExpenseDirectory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/ButtonCreator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="492">
           <caret line="83" column="63" lean-forward="false" selection-start-line="83" selection-start-column="63" selection-end-line="83" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2238#2239#0" expanded="true" />
-            <element signature="e#2300#2301#0" expanded="true" />
-            <element signature="e#2596#2597#0" expanded="true" />
-            <element signature="e#2653#2654#0" expanded="true" />
-            <element signature="e#2940#2941#0" expanded="true" />
-            <element signature="e#2998#2999#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+            <element signature="e#2590#2591#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2934#2935#0" expanded="true" />
+            <element signature="e#2992#2993#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/gui/StartWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="24" column="44" lean-forward="false" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
+        <state relative-caret-position="192">
+          <caret line="29" column="49" lean-forward="false" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#944#945#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/categories/Categories.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/menus/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
-          <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="59" selection-end-line="49" selection-end-column="59" />
+          <caret line="45" column="36" lean-forward="false" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#858#859#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#992#993#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/expensetracker5000/file_modification/ExpenseWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="55" column="46" lean-forward="false" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

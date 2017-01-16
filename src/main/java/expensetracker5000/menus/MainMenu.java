@@ -1,7 +1,7 @@
 package expensetracker5000.menus;
 
 import expensetracker5000.file_modification.Archive;
-import expensetracker5000.file_modification.Category;
+import expensetracker5000.file_modification.ExpenseWriter;
 
 import static expensetracker5000.menus.MenuOptions.mainMenuOptions;
 import static expensetracker5000.menus.TextInput.userInput;
@@ -31,19 +31,19 @@ public class MainMenu {
 
         mainMenuOptions();
         choice = userInput();
-        Category cat = null;
+        ExpenseWriter cat = null;
         if (choice.equals("1")) {
-            cat = new Category("food");
+            cat = new ExpenseWriter();
         } else if (choice.equals("2")) {
-            cat = new Category("rent+utilities");
+            cat = new ExpenseWriter();
         } else if (choice.equals("3")) {
-            cat = new Category("transportation");
+            cat = new ExpenseWriter();
         } else if (choice.equals("4")) {
-            cat = new Category("recreation");
+            cat = new ExpenseWriter();
         } else if (choice.equals("5")) {
-            cat = new Category("clothing");
+            cat = new ExpenseWriter();
         } else if (choice.equals("6")) {
-            cat = new Category("vacation");
+            cat = new ExpenseWriter();
         } else if (choice.equals("q")) {
             System.out.println("Goodbye!");
             return false;

@@ -1,6 +1,6 @@
 package expensetracker5000.gui;
 
-import expensetracker5000.categories.Categories;
+import expensetracker5000.categories.Category;
 import expensetracker5000.menus.ButtonCreator;
 
 import javax.swing.*;
@@ -12,10 +12,10 @@ import java.awt.*;
 public class ExpenseMenu {
     private JPanel expensePane;
     private JLabel actionLabel;
-    private Categories currentCategory;
+    private Category currentCategory;
     private ButtonCreator buttonCreator;
 
-    public ExpenseMenu(Categories currentCategory, ButtonCreator buttonCreator) {
+    public ExpenseMenu(Category currentCategory, ButtonCreator buttonCreator) {
         this.currentCategory = currentCategory;
         this.buttonCreator = buttonCreator;
     }

@@ -7,28 +7,28 @@ import java.util.List;
  * Created by nicholas on 1/14/17.
  */
 public class CategoryCreator {
-    private List<Categories> availableCategories = new ArrayList<>();
+    private List<Category> availableCategories = new ArrayList<>();
 
     public CategoryCreator() {
         addCategories();
     }
 
-    private Categories[] categoryList = {
-            new Categories("Food"),
-            new Categories("Rent & Utilities"),
-            new Categories("Transportation"),
-            new Categories("Recreation"),
-            new Categories("Clothing"),
-            new Categories("Vacation"),
+    private Category[] categoryList = {
+            new Category("Food"),
+            new Category("Rent & Utilities"),
+            new Category("Transportation"),
+            new Category("Recreation"),
+            new Category("Clothing"),
+            new Category("Vacation"),
     };
 
     public void addCategories() {
-        for (Categories category : categoryList) {
+        for (Category category : categoryList) {
             availableCategories.add(category);
         }
     }
 
-    public List<Categories> getAvailableCategories() {
+    public List<Category> getAvailableCategories() {
         return availableCategories;
     }
 }
