@@ -1,4 +1,4 @@
-package expensetracker5000.menus;
+package expensetracker5000.deprecated;
 
 /**
  * Created by nicholas on 1/8/17.

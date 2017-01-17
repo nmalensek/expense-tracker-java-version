@@ -1,5 +1,6 @@
 package expensetracker5000.categories;
 
+import expensetracker5000.analysis.FileReader;
 import expensetracker5000.file_modification.ExpenseWriter;
 
 import javax.swing.*;
@@ -35,7 +36,8 @@ public class Category {
     }
 
     public void listExpenses() {
-        System.out.println("list expenses");
+        FileReader fileReader = new FileReader();
+        fileReader.printExpenseFile(categoryFile);
     }
 
     public void analyze() {

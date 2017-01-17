@@ -36,10 +36,4 @@ public class ExpenseDialog {
 
     public String getSubcategory() { return subcategory.getText(); }
     public String getDescription() { return description.getText(); }
-
-    public static void main(String[] args) {
-        ExpenseDialog dialogs = new ExpenseDialog();
-        JOptionPane.showConfirmDialog(null, dialogs.expenseEntryPanel(),
-                "Title", JOptionPane.OK_CANCEL_OPTION);
-    }
 }

@@ -2,7 +2,7 @@ package expensetracker5000.menus;
 
 import expensetracker5000.analysis.CalculateStatistics;
 
-import static expensetracker5000.menus.MenuOptions.analysisOptions;
+import static expensetracker5000.deprecated.MenuOptions.analysisOptions;
 import static expensetracker5000.menus.TextInput.userInput;
 
 /**

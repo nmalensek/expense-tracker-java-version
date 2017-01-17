@@ -1,5 +1,6 @@
 package expensetracker5000.analysis;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -16,16 +17,24 @@ public class FileReader {
     private Scanner fileParser;
     private String subcategory;
 
-    public void printExpenseFile(String expenseFile) {
+    public void printExpenseFile(File fileToRead) {
         try {
             System.out.println("");
-            File fileToRead = new File(expenseFile);
             fileParser = new Scanner(fileToRead);
+            String output = String.format("%-20s %-18s %-20s %-20s %n", "Date",
+                    "Amount", "Subcategory", "Description");
+            output += "---------------------------------------------------------------------------\n";
 
             while (fileParser.hasNextLine()) {
-                System.out.println(fileParser.nextLine());
+                String[] delimiter = fileParser.nextLine().split("\\t");
+                for (String del : delimiter) {
+                    output += del.format("%-20s", del);
+                }
+                 output += "\n";
             }
-            System.out.println("");
+            System.out.println(output + "\n");
+            JOptionPane.showMessageDialog(null, output);
+//            System.out.println("");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

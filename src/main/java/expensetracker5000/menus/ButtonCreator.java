@@ -48,7 +48,6 @@ public class ButtonCreator {
         return backButton;
     }
 
-    //TODO simplify first param to return type of end method if possible
     public JButton newExpensesButton() {
         JButton expenseButton = new JButton("Add expense");
         expenseButton.addActionListener(new ActionListener() {

@@ -1,11 +1,5 @@
 package expensetracker5000.menus;
 
-import expensetracker5000.file_modification.Archive;
-import expensetracker5000.file_modification.ExpenseWriter;
-
-import static expensetracker5000.menus.MenuOptions.mainMenuOptions;
-import static expensetracker5000.menus.TextInput.userInput;
-
 /**
  * Created by nicholas on 8/5/16.
  */
