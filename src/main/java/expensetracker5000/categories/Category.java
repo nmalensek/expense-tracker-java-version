@@ -26,8 +26,8 @@ public class Category {
         availableCategories.add(this);
     }
     public void newExpense() {
-        ExpenseWriter expenseWriter = new ExpenseWriter();
-        expenseWriter.writeExpense(categoryFile);
+        ExpenseWriter expenseWriter = new ExpenseWriter(categoryFile);
+        expenseWriter.expenseEntry();
     }
 
     public void multipleExpenses() {

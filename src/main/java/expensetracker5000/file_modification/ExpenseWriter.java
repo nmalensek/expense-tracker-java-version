@@ -1,37 +1,35 @@
 package expensetracker5000.file_modification;
 
 import expensetracker5000.analysis.ExpenseTraits;
-import expensetracker5000.analysis.FileReader;
-import expensetracker5000.menus.AnalysisMenu;
+import expensetracker5000.gui.ExpenseDialog;
 
-import java.awt.*;
+import javax.swing.*;
 import java.io.*;
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.List;
 
 import static expensetracker5000.menus.CurrentDate.currentDateWithDay;
-import static expensetracker5000.menus.CurrentDate.currentYearMonth;
-import static expensetracker5000.menus.ExpenseDirectory.FOLDERPATH;
-import static expensetracker5000.menus.MenuOptions.categoryOptions;
-import static expensetracker5000.menus.MenuOptions.newFileOptions;
-import static expensetracker5000.menus.TextInput.userInput;
-import static expensetracker5000.menus.TextInput.userLineInput;
 
 /**
  * Created by nicholas on 8/5/16.
  */
 public class ExpenseWriter {
+    private File fileToWrite;
     private String currentDate = currentDateWithDay();
-    private static String yearAndMonth = currentYearMonth();
-    BigDecimal stringToBigDecimal = new BigDecimal("0.00");
+    private ExpenseDialog dialogs = new ExpenseDialog();
+    private BigDecimal expense;
+    private String subcategory;
+    private String description;
 
+    public ExpenseWriter(File fileToWrite) {
+        this.fileToWrite = fileToWrite;
+    }
 
-    public void writeExpense(File fileToWrite) {
-        List<ExpenseTraits> createdList = createExpense();
+    private void writeExpense(List<ExpenseTraits> expensesToWrite) {
         BufferedWriter writer = null;
 
-        for (ExpenseTraits expense : createdList) {
+        for (ExpenseTraits expense : expensesToWrite) {
             try {
                 writer = new BufferedWriter(new java.io.FileWriter(fileToWrite, true));
                 writer.write(expense.toString());
@@ -53,35 +51,44 @@ public class ExpenseWriter {
         }
     }
 
-    private List<ExpenseTraits> createExpense() {
+    private void createExpense() {
         List<ExpenseTraits> entries = new ArrayList<>();
 
-        ExpenseTraits eT = new ExpenseTraits(currentDate, expenseEntry(),
-                subcategoryEntry(), descriptionEntry());
+        ExpenseTraits eT = new ExpenseTraits(currentDate, expense,
+                subcategory, description);
         entries.add(eT);
-
-        return entries;
+        resetFields();
+        writeExpense(entries);
     }
 
-    private BigDecimal expenseEntry() {
-        System.out.println("Enter the expense amount:");
-        String input = userInput();
-        try {
-            stringToBigDecimal = new BigDecimal(input);
-        } catch (NumberFormatException e) {
-            System.out.println("Please enter a dollar amount.");
-            expenseEntry();
+    public void expenseEntry() {
+        int result = createExpenseDialog();
+        processEntry(result);
+    }
+
+    private int createExpenseDialog() {
+        return JOptionPane.showConfirmDialog(null, dialogs.expenseEntryPanel(),
+                "Title", JOptionPane.OK_CANCEL_OPTION);
+    }
+
+    private void processEntry(int result) {
+        if (result == JOptionPane.OK_OPTION) {
+            try {
+                subcategory = dialogs.getSubcategory();
+                description = dialogs.getDescription();
+                expense = dialogs.getAmount();
+                createExpense();
+            } catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(null, "Invalid amount, " +
+                        "please enter a dollar amount.");
+                expenseEntry();
+            }
         }
-        return stringToBigDecimal;
     }
 
-    private String subcategoryEntry() {
-        System.out.println("Enter the subcategory:");
-        return userLineInput();
-    }
-
-    private String descriptionEntry() {
-        System.out.println("Enter the expense description:");
-        return userLineInput();
+    private void resetFields() {
+        expense = null;
+        description = "";
+        subcategory = "";
     }
 }
