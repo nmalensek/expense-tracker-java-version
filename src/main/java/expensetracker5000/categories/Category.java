@@ -39,7 +39,8 @@ public class Category {
         FileReader fileReader = new FileReader();
         fileReader.printExpenseFile(categoryFile);
     }
-
+    //TODO implement analysis as single dialog showing all stats for (sub)category, leave subcategory blank
+    //to analyze entire category
     public void analyze() {
         System.out.println("analyze expenses");
     }

@@ -17,13 +17,13 @@ public class FileReader {
     private Scanner fileParser;
     private String subcategory;
 
+    //TODO rename to file printer class and move expense reading methods to new class
+
     public void printExpenseFile(File fileToRead) {
         try {
             System.out.println("");
             fileParser = new Scanner(fileToRead);
-            String output = String.format("%-20s %-18s %-20s %-20s %n", "Date",
-                    "Amount", "Subcategory", "Description");
-            output += "---------------------------------------------------------------------------\n";
+            String output = createHeader();
 
             while (fileParser.hasNextLine()) {
                 String[] delimiter = fileParser.nextLine().split("\\t");
@@ -32,14 +32,20 @@ public class FileReader {
                 }
                  output += "\n";
             }
-            System.out.println(output + "\n");
             JOptionPane.showMessageDialog(null, output);
-//            System.out.println("");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
             fileParser.close();
         }
+    }
+
+    private String createHeader() {
+        String header = String.format("%-20s %-18s %-20s %-20s %n", "Date",
+                "Amount", "Subcategory", "Description");
+        header += "-----------------------------------------" +
+                "----------------------------------\n";
+        return header;
     }
 
     public List<BigDecimal> readExpenses(String fileName, String statType, String readType) {
